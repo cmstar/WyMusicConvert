@@ -8,6 +8,7 @@ namespace WyMusicConvert
         private static readonly Type[] Options =
         {
             typeof(NcmConvertOption),
+            typeof(CacheFileConvertOption),
         };
 
         public static void Main(string[] args)
@@ -15,7 +16,8 @@ namespace WyMusicConvert
             using (var parser = new EnhancedCommandLineParser())
             {
                 parser.ParseArguments(args, Options)
-                    .WithParsed<NcmConvertOption>(option => Run(NcmConvert.Process, option));
+                    .WithParsed<NcmConvertOption>(option => Run(NcmConvert.Process, option))
+                    .WithParsed<CacheFileConvertOption>(option => Run(CacheFileConvert.Process, option));
             }
         }
 

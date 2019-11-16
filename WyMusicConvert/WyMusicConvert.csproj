@@ -54,6 +54,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cache\CacheFileConvert.cs" />
     <Compile Include="commandline\CommandLineOptions.cs" />
     <Compile Include="commandline\EnhancedCommandLineParser.cs" />
     <Compile Include="utils\FileStreamExtension.cs" />
