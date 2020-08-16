@@ -13,6 +13,10 @@ namespace WyMusicConvert
         [Option('f', "force", 
             HelpText = "Do convert even if the target file already exists.")]
         public bool ForceConvert { get; set; }
+
+        [Option("rm",
+            HelpText = "Delete the original file(s) after conversion.")]
+        public bool DeleteOriginalFile { get; set; }
     }
 
     [Verb("uc", HelpText = "Convert cache files (.uc) to MP3 format, without tags.")]

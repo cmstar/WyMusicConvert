@@ -15,12 +15,12 @@ namespace WyMusicConvert
                     // 客户端下载的文件都是直接放在根目录下的，没有子目录，不用递归。
                     foreach (var file in Directory.EnumerateFiles(path, "*.ncm"))
                     {
-                        ProcessFile(file, option.ForceConvert);
+                        ProcessFile(file, option.ForceConvert, option.DeleteOriginalFile);
                     }
                 }
                 else if (File.Exists(path))
                 {
-                    ProcessFile(path, option.ForceConvert);
+                    ProcessFile(path, option.ForceConvert, option.DeleteOriginalFile);
                 }
                 else
                 {
@@ -29,7 +29,7 @@ namespace WyMusicConvert
             }
         }
 
-        private static void ProcessFile(string path, bool forceConvert)
+        private static void ProcessFile(string path, bool forceConvert, bool deleteOriginalFile)
         {
             Console.Write($"Converting... {path}");
 
@@ -48,6 +48,11 @@ namespace WyMusicConvert
                 }
 
                 ncm.Dump(targetFilePath);
+            }
+
+            if (deleteOriginalFile)
+            {
+                File.Delete(path);
             }
 
             Console.WriteLine(" ...Done");
