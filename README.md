@@ -4,6 +4,8 @@
 
 需要 .net framework 4.5，Win8 及以上 Windows 系统自带，Win7 需要安装。
 
+基于网易云音乐v2.5.1(Build:196734)开发。
+
 ## 感谢
 
 - [anonymous5l/ncmdump](https://github.com/anonymous5l/ncmdump) 提供了解密算法。
@@ -45,13 +47,29 @@
 
 - -f, --force 若指定此参数，则当解密后的目标文件已存在时，仍执行解密；否则该文件被跳过。
 
-
 示例：
 
     wyconv ncm D:\CloudMusic\
     wyconv ncm -f D:\CloudMusic\a.ncm D:\CloudMusic\b.ncm
 
+### uc
 
-## 接下来……
+将缓存文件（.uc）转换为 .mp3 。
 
-转换客户端缓存文件（*.uc）。
+    wyconv uc [-f, --force] PATH [PATH [...]]
+
+必须：
+
+- PATH 指定一组需要转换的文件或目录。
+
+可选：
+
+- -f, --force 若指定此参数，则转换后的目标文件已存在时，仍执行转换；否则该文件被跳过。
+
+示例：
+
+    wyconv uc D:\CloudMusic\cache
+    wyconv uc -f D:\CloudMusic\cache\614514-320-c138e9.uc.ncm
+
+> 由于 .uc 不带有歌曲名称及描述信息，转换后的文件仅包含音频。歌曲信息需从网易的 API 或网页抓取，目前还没有实现，转换后这些信息还需人工补充。
+> 
