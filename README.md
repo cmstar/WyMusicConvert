@@ -11,8 +11,15 @@
 - [anonymous5l/ncmdump](https://github.com/anonymous5l/ncmdump) 提供了解密算法。
 - [GameBelial/ncmdump](https://github.com/GameBelial/ncmdump) 提供了.net版本的实现参考。
 
+## 如何获取可执行文件
 
-# 使用方法
+你可以通过下面的任意一种方式获取可执行文件：
+- 直接下载 release 中的 .zip 附件，解压后即可使用。
+- 执行 `build.bat` （需要有 [dotnetSDK](https://dotnet.microsoft.com/en-us/download) ），可执行文件及依赖库将生成在 `.build` 子目录下。
+- 通过 Visual Studio 或其他 IDE 编译。
+
+
+# 命令行用法
 
 ## 基本格式
 
