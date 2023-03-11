@@ -57,7 +57,13 @@
 
 示例：
 
+    ;; 将 D:\CloudMusic\ 下的所有 .ncm 转换为同名的 .mp3 。转换后 .ncm 文件会被保留。
     wyconv ncm D:\CloudMusic\
+    
+    ;; 单独转换 a.ncm ，转换成功后，删除 a.ncm ，仅留下 a.mp3 。
+    wyconv ncm --rm D:\CloudMusic\a.ncm
+    
+    ;; 单独转换 a.ncm 和 b.ncm ，若 a.mp3 或 b.mp3 已存在，则覆盖之。
     wyconv ncm -f D:\CloudMusic\a.ncm D:\CloudMusic\b.ncm
 
 ### uc
