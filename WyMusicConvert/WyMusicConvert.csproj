@@ -1,6 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Version>1.0.0</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <PackageDescription>A CLI tool for converting .ncm file to .mp3.</PackageDescription>
+    <Authors>cmstar</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <TargetFrameworks>net45</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <AssemblyName>wyconv</AssemblyName>
