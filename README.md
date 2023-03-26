@@ -83,7 +83,7 @@
 示例：
 
     wyconv uc D:\CloudMusic\cache
-    wyconv uc -f D:\CloudMusic\cache\614514-320-c138e9.uc.ncm
+    wyconv uc -f D:\CloudMusic\cache\614514-320-c138e9.uc
 
 > 由于 .uc 不带有歌曲名称及描述信息，转换后的文件仅包含音频。歌曲信息需从网易的 API 或网页抓取，目前还没有实现，转换后这些信息还需人工补充。
 > 
